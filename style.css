@@ -1,11 +1,22 @@
+:root {
+    --logo-font: "Aguafina Script";
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Reuseables */
+.grid {
+    max-width: 55rem;
+    margin-inline: auto;
+    padding: 1rem;
+}
+
 body {
-    font-family: "Libre Baskerville" ,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "";
     line-height: 1.2;
     font-size: 1rem;
 }
@@ -16,6 +27,38 @@ header {
     background-size: cover;
 }
 
+#logo {   
+    padding: 1rem;
+    font-weight: 500;
+    border-radius: 1.5rem;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+.logo-wrapper {
+    width: 85px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    box-shadow: 0 0 2rem -22px #000;
+    border-radius: 1.5rem;
+    animation: logo-parallax linear;
+    animation-timeline: scroll();
+}
+
+@keyframes logo-parallax {
+    to {
+        transform: translateY(-150px);
+        transform: translateX(-40px);
+        scale: 1.04;
+    }
+}
+
 nav {
     box-shadow: 0 5px 16px -16px #000;
     position: fixed;
@@ -23,16 +66,14 @@ nav {
     height: fit-content;
     background-color: #ffffff7d;
     backdrop-filter: blur(5px);
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
+    z-index: 9999;
 }
 
 nav h2 {
     position: absolute;
     left: 3%;
     top: 15px;
-    font-family: "Aguafina Script";
+    font-family: var(--logo-font);
     z-index: 9999;
 }
 
@@ -89,9 +130,41 @@ a:hover {
     z-index: 9999;
 }
 
+/* First section */
+.three-paragraphs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: start;
+    align-items: center;
+    /* border-bottom: 1.5px solid #000; */
+}
+
+.three-paragraphs > * {
+    width: 30%;
+    padding: 1rem;   
+}
+
+.three-paragraphs::after {
+    content: "";
+    width: 60%;
+    margin-inline: auto;
+    border-bottom: solid 1.5px #000;
+    padding-block: 1rem;
+}
+
+.one-paragraph h3 {
+    margin-block: .5rem;
+    border-left: 1.5px solid #000;
+    padding-inline: 1rem;
+    padding-block: .2rem;
+    font-weight: 600;
+    width: fit-content;
+}
+
 
 /* Responsibility */
-@media (width < 600px) {
+@media (width < 55rem) {
     nav {
         min-height: 50px;
     }
@@ -104,5 +177,15 @@ a:hover {
     }
     a:hover {
         box-shadow: 0 0 16px -13px #000;
+    }
+    /* Section one */
+    .three-paragraphs > * {
+        width: 45%;
+    }
+}
+
+@media (width <= 35rem) {
+    .three-paragraphs > * {
+        width: 100%;
     }
 }

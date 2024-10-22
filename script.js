@@ -22,7 +22,7 @@ window.addEventListener("resize", (e) => {
     e.preventDefault()
     navButton.style.backgroundImage="url(./images/hamburger.png)"
 
-    if (window.innerWidth >= 600) {
+    if (window.innerWidth >= 880) {
         nav.style.height="fit-content"
         nav.setAttribute("data-visible", "false")
         
