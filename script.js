@@ -1,3 +1,4 @@
+// Navigation functionality
 const nav = document.querySelector(".my-nav")
 const navButton = document.querySelector(".nav-button")
 
@@ -31,3 +32,27 @@ window.addEventListener("resize", (e) => {
         nav.setAttribute("data-visible", "false")
     }
 }, [window.innerWidth])
+
+
+// First section paragraphs animations
+const myParagraphs = document.querySelectorAll(".one-paragraph");
+console.log(myParagraphs)
+
+const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      const intersecting = entry.isIntersecting;
+        if (intersecting) {
+            entry.target.classList.remove("one-paragraph")
+            entry.target.classList.add("fade-in")
+        }
+       else {
+        
+       }
+    }
+}, {
+    delay: 300
+});
+
+myParagraphs.forEach(paragraph => {
+    observer.observe(paragraph)
+});
