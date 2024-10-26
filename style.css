@@ -21,7 +21,7 @@
 body {
     font-family: var(--font-2);
     line-height: 1.2;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 header {
@@ -35,13 +35,12 @@ header {
     font-weight: 500;
     border-radius: 1.5rem;
     width: 100%;
-    backdrop-filter: blur(10px);
 }
 
 .logo-wrapper {
     width: 85px;
     position: absolute;
-    top: 40%;
+    top: 36%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -50,14 +49,14 @@ header {
     z-index: 1;
     box-shadow: 0 0 2rem -22px #000;
     border-radius: 1.5rem;
+    backdrop-filter: blur(20px);
     animation: logo-parallax linear;
     animation-timeline: scroll();
 }
 
 @keyframes logo-parallax {
     to {
-        transform: translateY(-150px);
-        transform: translateX(-40px);
+        transform: translate(-50%, 250%);
         scale: 1.04;
     }
 }
@@ -186,27 +185,26 @@ a:hover {
 }
 
 .boxes {
-    max-width: 50rem;
-    margin-inline: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    padding-block: 2.5rem;
-    padding-inline: 2rem;
+    gap: 1.5rem;
+    padding-inline: 1rem;
+    border: solid 2px navy;
 }
 
 .box {
     position: relative;
-    width: 15rem;
-    height: 15rem;
+    min-width: 50%;
+    max-height: 390px;
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 0 2rem -25px #000;
 }
 
 .box > p {
+    position: absolute;
     color: #fff;
     transform: rotate(-90deg);
     font-size: 3rem;
@@ -216,7 +214,7 @@ a:hover {
 
 .box > img {
     width: 100%;
-    scale: 1.8;
+    scale: 1;
 }
 
 .children {
