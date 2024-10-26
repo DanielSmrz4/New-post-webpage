@@ -24,18 +24,21 @@
     height: 15rem;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 0 2rem -25px #000;
+    box-shadow: 0 0 2rem -20px #000;
+    transition: all 400ms ease;
+    cursor: pointer;
 }
 
 .store-section-header {
     position: absolute;
-    top: 50%;
-    left: 0px;
+    height: 100%;
+    transform: translateX(-100%);
     color: #fff;
-    transform: rotate(-90deg);
     font-size: 3rem;
     font-weight: 100;
     letter-spacing: 3px;
+    transition: all 400ms ease;
+    padding: .5rem;
 }
 
 
@@ -172,7 +175,7 @@ a:hover {
     content: "";
     width: 65%;
     margin-inline: auto;
-    border-bottom: solid 1.5px #000;
+    border-bottom: solid 2px #000;
     padding-block: 1rem;
 }
 
@@ -214,21 +217,25 @@ a:hover {
     align-items: center;
     gap: 1.5rem;
     padding-inline: 1rem;
-    border: solid 2px navy;
+}
+
+.box:hover {
+    scale: 1.01;
+    box-shadow: 0 0 2rem -10px #000;
 }
 
 .box-children {   
-    background-image: url("./images/children.jpg");
+    background-image: url("./images/adults.jpg");
     background-size: cover;
 }
 
 .box-adults {   
-    background-image: url("./images/children.jpg");
+    background-image: url("./images/adults.jpg");
     background-size: cover;
 }
 
 .box-utility {   
-    background-image: url("./images/children.jpg");
+    background-image: url("./images/adults.jpg");
     background-size: cover;
 }
 
@@ -242,6 +249,32 @@ a:hover {
 
 .box-utility p {
     background-color: var(--utility-clr);
+}
+
+
+/* Third section Newsletter */
+.about-store {
+    border: solid 3px orange;
+    height: 500px;
+    padding: 1rem;
+    margin-block: 2rem;
+    display: grid;
+    grid-template-areas: 'a .'
+                         '. b';
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.upper-half {
+    grid-area: a;
+    border: solid 2px yellow;
+    text-align: center;
+}
+
+.lower-half {
+    grid-area: b;
+    border: solid 2px pink;
 }
 
 
@@ -269,11 +302,5 @@ a:hover {
 @media (width <= 40rem) {
     .three-paragraphs > * {
         width: 100%;
-    }
-}
-
-@media (width <= 30rem) {
-    .boxes {
-        padding-inline: 1rem;
     }
 }

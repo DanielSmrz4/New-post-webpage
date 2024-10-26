@@ -36,7 +36,6 @@ window.addEventListener("resize", (e) => {
 
 // First section paragraphs animations
 const myParagraphs = document.querySelectorAll(".one-paragraph");
-console.log(myParagraphs)
 
 const observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
@@ -56,3 +55,17 @@ const observer = new IntersectionObserver((entries) => {
 myParagraphs.forEach(paragraph => {
     observer.observe(paragraph)
 });
+
+
+// Store boxes Animation
+const box = document.querySelector(".box")
+const boxHeader = document.querySelectorAll(".store-section-header")
+console.log(boxHeader)
+
+const displayHeader = (i) => {
+    boxHeader[i].style.transform="translateX(0)"
+}
+
+const removeHeader = (i) => {
+    boxHeader[i].style.transform="translateX(-100%)"
+}
