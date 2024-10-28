@@ -40,7 +40,14 @@ img {
     cursor: pointer;
 }
 
-.store-section-header {
+.section-header {
+    position: relative;
+    width: fit-content;
+    margin-inline: auto;
+    padding-block: 4rem;
+}
+
+.store-box-header {
     position: absolute;
     height: 100%;
     transform: translateX(-100%);
@@ -50,6 +57,15 @@ img {
     letter-spacing: 3px;
     transition: all 400ms ease;
     padding: .5rem;
+}
+
+.effect-header{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(3rem, .5rem + 5vw, 3.5rem);
+    color: #0000000d;
 }
 
 .divider {
@@ -184,7 +200,7 @@ a:hover {
     z-index: 9999;
 }
 
-/* First section Three parahraphs */
+/* Three parahraphs section */
 .three-paragraphs {
     display: flex;
     flex-wrap: wrap;
@@ -220,30 +236,19 @@ a:hover {
 }
 
 
-/* Second section Store */
-.store {
-    padding-block: 5rem;
-}
-
+/* Store section*/
 .store::before {
     content: "";
     display: block;
     width: 65%;
     margin-inline: auto;
     border-bottom: solid 2px #000;
-}
-
-.section-2-header {
-    text-align: center;
-    padding-block: 2rem 2rem;
-    font-family: var(--font-2);
-    font-size: 2rem;
+    padding-block: 2rem;
 }
 
 .boxes {
     max-width: 100svw;
     margin-inline: auto;
-    margin-block: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -251,11 +256,6 @@ a:hover {
     gap: 1.5rem;
     padding-inline: 1rem;
 }
-
-/* .box:hover {
-    scale: 1.01;
-    box-shadow: 0 0 2rem -12px #000;
-} */
 
 .box-children {   
     background-image: url("./images/skate.jpg");
@@ -300,35 +300,29 @@ a:hover {
     padding-block: 1rem;
 }
 
-.paragraph-store::after {
+/* .paragraph-store::after {
     content: "";
     display: block;
     width: 65%;
     margin-inline: auto;
     border-bottom: solid 2px #000;
     padding-block: 2rem;
-}
+} */
 
 
-/* Third section Newsletter */
+/* Newsletter section */
 .newsletter {
     padding-block-end: 5rem;
     padding-inline: 1rem;
 }
 
-.section-header {
-    position: relative;
-    text-align: center;
-    margin-block: 5rem;
-}
-
-.effect-header{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    font-size: clamp(3rem, .5rem + 5vw, 3.5rem);
-    color: #0000000d;
+.newsletter::after {
+    content: "";
+    display: block;
+    width: 65%;
+    margin-inline: auto;
+    border-bottom: solid 2px #000;
+    padding-block: 2rem;
 }
 
 .newsleter-sections {
