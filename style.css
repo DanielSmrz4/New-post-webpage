@@ -18,6 +18,11 @@ html {
     scroll-behavior: smooth;
 }
 
+img {
+    display: block;
+    width: 100%;
+}
+
 /* Reuseables */
 .grid {
     max-width: 60rem;
@@ -50,7 +55,7 @@ html {
 .divider {
     display: block;
     width: 100svw;
-    height: 15rem;   
+    height: clamp(10rem, 1rem + 10vw, 15rem);   
     background: radial-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../images/main_background.jpg);
 	background-size: cover;
 	background-attachment: fixed;
@@ -135,7 +140,7 @@ nav h2 {
     z-index: 9999;
 }
 
-li {
+.my-nav li {
     text-align: center;
     min-width: 100px;
     display: flex;
@@ -150,12 +155,13 @@ li {
     background-color: transparent;
 }
 
-a {
+.my-nav a {
     text-decoration: none;
     color: black;
     padding-block: 1rem;
     width: 100%;
     transition: all 100ms linear;
+    font-size: 1.2rem;
 }
 
 a:hover {
@@ -201,7 +207,7 @@ a:hover {
 .fade-in {
     transform: translateY(0);
     opacity: 1;
-    transition: all 500ms ease-out;
+    transition: all 1000ms ease;
 }
 
 .p-heading {
@@ -267,11 +273,11 @@ a:hover {
 }
 
 .box-children > p {
-    background-color: var(--children-clr);
+    background-color: var(--utility-clr);
 }
 
 .box-adults > p {
-    background-color: var(--adults-clr);
+    background-color: var(--utility-clr);
 }
 
 .box-utility p {
@@ -305,31 +311,76 @@ a:hover {
 
 
 /* Third section Newsletter */
-.about-store {
-    height: 500px;
-    padding: 1rem;
-    margin-block: 2rem;
+.newsletter {
+    padding-block-end: 5rem;
+    padding-inline: 1rem;
+}
+
+.section-header {
+    position: relative;
+    text-align: center;
+    margin-block: 5rem;
+}
+
+.effect-header{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(3rem, .5rem + 5vw, 3.5rem);
+    color: #0000000d;
+}
+
+.newsleter-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.newsleter-sections > article {
     display: grid;
-    grid-template-areas: 'a .'
-                         '. b';
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    /* background: radial-gradient(rgba(0,10,40,0.6), rgba(0,0,0,0.6)), url(./images/sea.jpg); */
-    background-size: cover;
 }
 
-.upper-half {
-    grid-area: a;
+.article-text {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.article-text h4 {
+    font-style: italic;
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+.article-link {
+    color: rgb(211, 137, 0);
+    width: fit-content;
+    font-style: italic;
+    text-underline-offset: 5px;
+}
+
+.article-link:hover {
+    color: rgb(255, 166, 0);
+}
+
+figcaption {
     text-align: center;
-}
-
-.lower-half {
-    grid-area: b;
+    font-weight: 100;
+    font-style: italic;
+    font-size: .8rem;
 }
 
 
 /* Responsivity */
 @media (width < 55rem) {
+    body {
+        font-size: 1rem;
+    }
     nav {
         min-height: 50px;
     }
@@ -350,7 +401,22 @@ a:hover {
 }
 
 @media (width <= 40rem) {
+    body {
+        font-size: 1rem;
+    }
     .three-paragraphs > * {
         width: 100%;
+    }
+    .newsleter-sections > article {
+        grid-template-columns: 1fr;
+        grid-template-rows: fit-content 1fr;
+        grid-template-areas: 'txt' 'image';
+        gap: 2rem;
+    }
+    .article-text {
+        grid-area: txt;
+    }
+    .article-image {
+        grid-area: image;
     }
 }

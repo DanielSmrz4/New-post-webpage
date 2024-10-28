@@ -34,7 +34,7 @@ window.addEventListener("resize", (e) => {
 }, [window.innerWidth])
 
 
-// First section paragraphs animations
+// Paragraphs animations
 const myParagraphs = document.querySelectorAll(".one-paragraph");
 
 const observer = new IntersectionObserver((entries) => {

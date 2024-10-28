@@ -6,11 +6,11 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./images/favikon.ico" type="image/x-icon"/>
-    <!-- Font-1 -->
+    <!-- Font-1 LOGO-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap" rel="stylesheet">
-    <!-- Font-2 -->
+    <!-- Font-2 HEADERS and NAV-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
@@ -25,13 +25,13 @@
                 <li><a href="" id="invisible-row">Easter egg</a></li>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#store">Store</a></li>
-                <li><a href="">Newsletter</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
             <button onclick="navToggle();" class="nav-button"></button>           
         </nav>
         <div class="logo-wrapper">
-            <img id="logo" src="./images/logo.png" alt="">
+            <img id="logo" src="./images/logo.png" alt="logo">
         </div>
         
     </header>
@@ -59,7 +59,10 @@
             </div>
         </section>
         <section class="store grid" id="store">
-            <h2 class="section-2-header">Lorem ipsum</h2>
+            <div class="section-header">
+                <h2>LOREM IPSUM</h2>
+                <h2 class="effect-header">LOREM&nbspIPSUM</h2>                
+            </div>
             <div class="boxes">
                 <div class="box box-children" onmouseenter="displayHeader(0)" onmouseleave="removeHeader(0)">
                     <p class="store-section-header">LOREM</p>
@@ -81,24 +84,36 @@
 
         <div class="divider"></div>
 
-        <section class="newsletter grid">
-            <div class="about-store">
-                <div class="upper-half">
-                    <div>
-                        <h3 class="p-heading">Lorem</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ducimus at omnis, asperiores expedita reiciendis? Dignissimos numquam distinctio exercitationem, ea beatae velit earum. Odit eos dolores impedit esse quia animi!
-                        </p>
+        <section class="newsletter grid" id="newsletter">
+            <div class="section-header">
+                <h2>LOREM IPSUM</h2>
+                <h2 class="effect-header">LOREM&nbspIPSUM</h2>                
+            </div>           
+            <div class="newsleter-sections">
+                <article>
+                    <div class="article-text">
+                        <h3 class="p-heading">Lorem ipsum</h3>
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quos porro vel velit tempora ea numquam praesentium quisquam voluptatibus iusto unde hic laboriosam accusantium aspernatur sit, laborum quo dignissimos id!</p>
+                        <a href="#" class="article-link">Full story</a>
                     </div>
-                </div>
-                <div class="lower-half">
-                    <div>
-                        <h3 class="p-heading">Lorem</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ducimus at omnis, asperiores expedita reiciendis? Dignissimos numquam distinctio exercitationem, ea beatae velit earum. Odit eos dolores impedit esse quia animi!
-                        </p>
-                    </div>
-                </div>
+                    <figure>
+                        <img class="article-image" src="./images/rugby.jpg" alt="rugby">
+                        <figcaption>Rugby lorem ipsum 28/10/2024 Australia</figcaption>                       
+                    </figure>                                        
+                </article>
+                <article>
+                    <figure>
+                        <img class="article-image" src="./images/snowboard.jpg" alt="snowboard">
+                        <figcaption>Snowboarding lorem ipsum 01/11/2023 Switzerland</figcaption>
+                    </figure>                    
+                    <div class="article-text">
+                        <h3 class="p-heading">Lorem ipsum</h3>
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quos porro vel velit tempora ea numquam praesentium quisquam voluptatibus iusto unde hic laboriosam accusantium aspernatur sit, laborum quo dignissimos id!</p>
+                        <a href="#" class="article-link">Full story</a>
+                    </div>                                      
+                </article>
             </div>
         </section>
     </main>
