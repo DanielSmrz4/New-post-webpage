@@ -18,13 +18,13 @@
     <title>New post</title>
 </head>
 <body>
-    <header>        
+    <header id="home">        
         <nav>
             <h2>New Post</h2>
             <ul class="my-nav" data-visible="false">
-                <li><a href="" id="invisible-row">easter egg</a></li>
-                <li><a href="">Home</a></li>
-                <li><a href="">Store</a></li>
+                <li><a href="" id="invisible-row">Easter egg</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#store">Store</a></li>
                 <li><a href="">Newsletter</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
@@ -51,29 +51,38 @@
                     </p>
                 </div>
                 <div class="one-paragraph">
-                    <h3 class="p-heading">Dolor</h3>
+                    <h3 class="p-heading ">Dolor</h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ducimus at omnis, asperiores expedita reiciendis? Dignissimos numquam distinctio exercitationem, ea beatae velit earum. Odit eos dolores impedit esse quia animi!
                     </p>
                 </div>
             </div>
         </section>
-        <section class="store">
+        <section class="store grid" id="store">
             <h2 class="section-2-header">Lorem ipsum</h2>
             <div class="boxes">
                 <div class="box box-children" onmouseenter="displayHeader(0)" onmouseleave="removeHeader(0)">
-                    <p class="store-section-header">CHILDREN</p>
+                    <p class="store-section-header">LOREM</p>
                 </div>
                 <div class="box box-adults" onmouseenter="displayHeader(1)" onmouseleave="removeHeader(1)">
-                    <p class="store-section-header">ADULTS</p>
+                    <p class="store-section-header">IPSUM</p>
                 </div>
                 <div class="box box-utility" onmouseenter="displayHeader(2)" onmouseleave="removeHeader(2)">
-                    <p class="store-section-header">UTILITY</p>
+                    <p class="store-section-header">DOLOR</p>
                 </div>
-            </div>           
+            </div>
+            <div class="paragraph-store one-paragraph">
+                <h3 class="p-heading">Lorem</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ducimus at omnis, asperiores expedita reiciendis? Dignissimos numquam distinctio exercitationem, ea beatae velit earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores atque, fugiat impedit dolorum, harum possimus ut reprehenderit voluptates velit, quis saepe inventore laboriosam. Veritatis molestias non laborum laboriosam nihil facilis? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam ipsa, totam placeat sed iusto laborum saepe soluta inventore eum debitis expedita voluptatibus cupiditate sint voluptatum reiciendis hic. Tenetur, ad assumenda?
+                </p>
+            </div>              
         </section>
-        <section class="newsletter">
-            <div class="about-store grid">
+
+        <div class="divider"></div>
+
+        <section class="newsletter grid">
+            <div class="about-store">
                 <div class="upper-half">
                     <div>
                         <h3 class="p-heading">Lorem</h3>

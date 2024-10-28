@@ -60,7 +60,6 @@ myParagraphs.forEach(paragraph => {
 // Store boxes Animation
 const box = document.querySelector(".box")
 const boxHeader = document.querySelectorAll(".store-section-header")
-console.log(boxHeader)
 
 const displayHeader = (i) => {
     boxHeader[i].style.transform="translateX(0)"

@@ -6,10 +6,16 @@
     --utility-clr: #0000003c;
 }
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* Reuseables */
@@ -41,6 +47,16 @@
     padding: .5rem;
 }
 
+.divider {
+    display: block;
+    width: 100svw;
+    height: 15rem;   
+    background: radial-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../images/main_background.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+/* End of reuseables */
+
 
 body {
     font-family: var(--font-2);
@@ -50,7 +66,7 @@ body {
 
 header {
     min-height: 65svh;
-    background-image: url("./images/main_background.jpg");
+    background-image: url(./images/main_background.jpg);
     background-size: cover;
 }
 
@@ -59,12 +75,17 @@ header {
     font-weight: 500;
     border-radius: 1.5rem;
     width: 100%;
+    transition: all 800ms ease;
+}
+
+#logo:hover {
+    scale: 1.1;
 }
 
 .logo-wrapper {
     width: 85px;
     position: absolute;
-    top: 36%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -76,6 +97,7 @@ header {
     backdrop-filter: blur(10px);
     animation: logo-parallax linear;
     animation-timeline: scroll();
+    
 }
 
 @keyframes logo-parallax {
@@ -171,14 +193,6 @@ a:hover {
     padding: 1rem;   
 }
 
-.three-paragraphs::after {
-    content: "";
-    width: 65%;
-    margin-inline: auto;
-    border-bottom: solid 2px #000;
-    padding-block: 1rem;
-}
-
 .one-paragraph {
     transform: translateY(50px);
     opacity: 0;
@@ -192,7 +206,7 @@ a:hover {
 
 .p-heading {
     margin-block: .5rem;
-    border-left: 1.5px solid #000;
+    border-left: 2px solid #000;
     padding-inline: 1rem;
     padding-block: .2rem;
     font-weight: 600;
@@ -201,6 +215,18 @@ a:hover {
 
 
 /* Second section Store */
+.store {
+    padding-block: 5rem;
+}
+
+.store::before {
+    content: "";
+    display: block;
+    width: 65%;
+    margin-inline: auto;
+    border-bottom: solid 2px #000;
+}
+
 .section-2-header {
     text-align: center;
     padding-block: 2rem 2rem;
@@ -211,6 +237,7 @@ a:hover {
 .boxes {
     max-width: 100svw;
     margin-inline: auto;
+    margin-block: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -219,23 +246,23 @@ a:hover {
     padding-inline: 1rem;
 }
 
-.box:hover {
+/* .box:hover {
     scale: 1.01;
-    box-shadow: 0 0 2rem -10px #000;
-}
+    box-shadow: 0 0 2rem -12px #000;
+} */
 
 .box-children {   
-    background-image: url("./images/adults.jpg");
+    background-image: url("./images/skate.jpg");
     background-size: cover;
 }
 
 .box-adults {   
-    background-image: url("./images/adults.jpg");
+    background-image: url("./images/surff.jpg");
     background-size: cover;
 }
 
 .box-utility {   
-    background-image: url("./images/adults.jpg");
+    background-image: url("./images/hikee.png");
     background-size: cover;
 }
 
@@ -251,10 +278,34 @@ a:hover {
     background-color: var(--utility-clr);
 }
 
+.paragraph-store {
+    display: block;
+    padding-block: 2rem;
+    padding-inline: 1rem;
+    text-align: center;
+}
+
+.paragraph-store > h3 {
+    text-align: center;
+    margin-inline: auto;
+}
+
+.paragraph-store > p {
+    padding-block: 1rem;
+}
+
+.paragraph-store::after {
+    content: "";
+    display: block;
+    width: 65%;
+    margin-inline: auto;
+    border-bottom: solid 2px #000;
+    padding-block: 2rem;
+}
+
 
 /* Third section Newsletter */
 .about-store {
-    border: solid 3px orange;
     height: 500px;
     padding: 1rem;
     margin-block: 2rem;
@@ -263,22 +314,21 @@ a:hover {
                          '. b';
     justify-content: center;
     align-items: center;
-    
+    /* background: radial-gradient(rgba(0,10,40,0.6), rgba(0,0,0,0.6)), url(./images/sea.jpg); */
+    background-size: cover;
 }
 
 .upper-half {
     grid-area: a;
-    border: solid 2px yellow;
     text-align: center;
 }
 
 .lower-half {
     grid-area: b;
-    border: solid 2px pink;
 }
 
 
-/* Responsibility */
+/* Responsivity */
 @media (width < 55rem) {
     nav {
         min-height: 50px;
