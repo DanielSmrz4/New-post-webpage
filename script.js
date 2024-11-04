@@ -68,3 +68,17 @@ const displayHeader = (i) => {
 const removeHeader = (i) => {
     boxHeader[i].style.transform="translateX(-100%)"
 }
+
+
+// Reset inner text of form inputs
+const inputs = document.querySelectorAll(".form-input")
+const submitInput = document.querySelector(".submit-input")
+
+
+submitInput.addEventListener("click", (e) => {
+    e.preventDefault()
+
+    inputs.forEach((input) => {
+        input.value = ""
+    })
+});

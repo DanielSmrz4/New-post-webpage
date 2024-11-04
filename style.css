@@ -6,6 +6,8 @@
     --utility-clr: #0000003c;
     --yellow-dark: rgb(211, 137, 0);
     --yellow-light: rgb(255, 166, 0);
+    --clr-success: rgba(46, 170, 46, 0.7);
+    --clr-error: rgba(190, 41, 41, 0.7);
 }
 
 *,
@@ -249,7 +251,6 @@ a:hover {
     width: 65%;
     margin-inline: auto;
     border-bottom: solid 2px #000;
-    /* padding-block: 1rem; */
 }
 
 .boxes {
@@ -373,43 +374,70 @@ figcaption {
 
 .subscribe-form-section {
     padding-inline: 1rem;
-    margin-block: 5rem;
+    margin-block: 2rem;
     max-width: 400px;
     margin-inline: auto;
 }
 
 .form-wrapper {
     padding: 1rem;
-    border: solid 1px #000;
+    border: solid 2px #000;
     border-radius: 1rem;
-    box-shadow: 0 0 1rem -10px;
+    /* box-shadow: 0 0 1rem -10px; */
 }
 
-.form-title-image {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.form-title-image > h3 {
-    
-}
-
-.form-title-image > img {
-    width: 3rem;
+.form-wrapper >h3 {
+    text-align: center;
+    margin-inline: auto;
 }
 
 .subscribe-form {
-    border: solid 1px lime;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
+    padding-block-start: 1rem;
 }
 
 .subscribe-form > * {
     display: block;
 }
+
+.form-input {
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+}
+
+.subscribe-form > input[type="submit"] {
+    padding: .4rem 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--yellow-light);
+    color: #fff;
+    box-shadow: 0 0 1rem -13px #000;
+    cursor: pointer;
+}
+
+.subscribe-form > input[type="submit"]:hover {
+    background-color: var(--yellow-dark);
+}
+
+.subscribe-form > input:not(:placeholder-shown):valid {
+    outline-color: var(--clr-success);
+}
+
+.subscribe-form > input:not(:placeholder-shown):invalid {
+    outline-color: var(--clr-error);
+}
+
+.subscribe-form > input:focus:invalid {
+    outline-color: var(--yellow-light);
+}
+
 
 /* FOOTER SECTION */
 
