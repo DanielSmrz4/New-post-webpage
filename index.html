@@ -23,11 +23,11 @@
         <nav>
             <h2>New Post</h2>
             <ul class="my-nav" data-visible="false">
-                <li><a id="invisible-row">Easter egg</a></li>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#store">Store</a></li>
-                <li><a href="#newsletter">Newsletter</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a id="invisible-row" class="nav-link">Easter egg</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#store" class="nav-link">Store</a></li>
+                <li><a href="#newsletter" class="nav-link">Newsletter</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <button onclick="navToggle();" class="nav-button"></button>           
         </nav>
@@ -61,8 +61,8 @@
         </section>
         <section class="store grid" >
             <div class="section-header" id="store">
-                <h2>LOREM IPSUM</h2>
-                <h2 class="effect-header">LOREM&nbspIPSUM</h2>                
+                <h2>STORE</h2>
+                <h2 class="effect-header">STORE</h2>                
             </div>
             <div class="boxes">
                 <div class="box box-children" onmouseenter="displayHeader(0)" onmouseleave="removeHeader(0)">
@@ -87,8 +87,8 @@
 
         <section class="newsletter grid" >
             <div class="section-header" id="newsletter">
-                <h2>LOREM IPSUM</h2>
-                <h2 class="effect-header">LOREM&nbspIPSUM</h2>                
+                <h2>NEWSLETTER</h2>
+                <h2 class="effect-header">NEWSLETTER</h2>                
             </div>           
             <div class="newsleter-sections">
                 <article>
@@ -119,8 +119,8 @@
         </section>
         <section class="contact-form grid" id="contact">
             <div class="section-header" id="newsletter">
-                <h2>LOREM IPSUM</h2>
-                <h2 class="effect-header">LOREM&nbspIPSUM</h2>                
+                <h2>CONTACT</h2>
+                <h2 class="effect-header">CONTACT</h2>                
             </div>
 
             <div class="contact-form-wrapper">
@@ -152,7 +152,30 @@
     </main>
 
     <footer>
-
+        <div class="first-row-wrapper">
+            <div class="about-shortcut-socials">
+                <h3 class="p-heading">New Post</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam impedit repudiandae veniam quis? At harum odit in sint, vitae nobis cum quia, minus natus reprehenderit magni maiores, rem quibusdam cupiditate.</p>
+                <div class="socials">
+                    <a href="https://facebook.com" target="_blank"><img src="./images/socials/facebook.png" alt=""></a>
+                    <a href="https://instagram.com" target="_blank"><img src="./images/socials/instagram.png" alt=""></a>
+                    <a href="https://linkedin.com" target="_blank"><img src="./images/socials/linkedin.png" alt=""></a>
+                    
+                </div>
+            </div>
+            <div class="links-wrapper">
+                <h3 class="p-heading">Useful Links</h3>
+                <div class="links">
+                    <a href="#home">Home</a>
+                    <a href="#store">Store</a>
+                    <a href="#newsletter">Newsletter</a>
+                    <a href="#">Terms of services</a>
+                    <a href="#">Privacy policy</a>
+                </div>               
+            </div>
+        </div>
+        <p class="copyright">&copy New Post, All Rights Reserved.</p>
+        
     </footer>
 </body>
 <script src="script.js"></script>
