@@ -9,10 +9,10 @@ const navToggle = () => {
     if (dataVisible == "false") {
         nav.style.height="fit-content"
         nav.setAttribute("data-visible", "true")
-        navButton.style.backgroundImage="url(./images/cancel.png)"
+        navButton.style.backgroundImage="url(./images/togglenav/cancel.png)"
     }
     else if (dataVisible == "true") {
-        navButton.style.backgroundImage="url(./images/hamburger.png)"
+        navButton.style.backgroundImage="url(./images/togglenav/hamburger.png)"
         nav.style.height="0px"
         nav.setAttribute("data-visible", "false")
     }
@@ -21,7 +21,7 @@ const navToggle = () => {
 
 window.addEventListener("resize", (e) => {
     e.preventDefault()
-    navButton.style.backgroundImage="url(./images/hamburger.png)"
+    navButton.style.backgroundImage="url(./images/togglenav/hamburger.png)"
 
     if (window.innerWidth >= 880) {
         nav.style.height="fit-content"

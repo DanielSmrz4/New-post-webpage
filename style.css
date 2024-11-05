@@ -91,7 +91,7 @@ img {
     display: block;
     width: 100svw;
     height: clamp(10rem, 1rem + 10vw, 15rem);   
-    background: radial-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../images/main_background.jpg);
+    background: radial-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url("../images/main_background.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -101,7 +101,7 @@ img {
 
 header {
     min-height: 65svh;
-    background-image: url(./images/main_background.jpg);
+    background-image: url("./images/main_background.jpg");
     background-size: cover;
 }
 
@@ -265,17 +265,17 @@ nav h2 {
 }
 
 .box-children {   
-    background-image: url("./images/skate.jpg");
+    background-image: url("./images/store/skate.jpg");
     background-size: cover;
 }
 
 .box-adults {   
-    background-image: url("./images/surff.jpg");
+    background-image: url("./images/store/surf.jpg");
     background-size: cover;
 }
 
 .box-utility {   
-    background-image: url("./images/hikee.png");
+    background-image: url("./images/store/hike.png");
     background-size: cover;
 }
 
@@ -341,6 +341,57 @@ nav h2 {
     display: flex;
     flex-direction: column;
     gap: .5rem;
+}
+
+.article-animation-left {
+    animation: slide-in-left 800ms ease;
+    animation-timeline: view();
+    animation-range-end: 500px;   
+}
+
+.article-animation-right {
+    animation: slide-in-right 800ms ease;
+    animation-timeline: view();
+    animation-range-end: 500px;
+}
+
+.image-animation-bottom {
+    animation: slide-in-bot 1000ms ease;
+    animation-timeline: view();
+    animation-range-end: 500px;
+}
+
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-bot {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .article-text h4 {
@@ -452,11 +503,12 @@ figcaption {
 
 
 /* FOOTER */
+
 footer {
     margin-block-start: clamp(4rem, 1rem + 5vw, 6rem);
     padding-block-start: 2rem;
     padding-inline: 1rem;
-    background: radial-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(../images/main_background.jpg);
+    background: radial-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url("../images/main_background.jpg");
 	background-size: cover;
 	background-attachment: fixed;
     color: #fff;
