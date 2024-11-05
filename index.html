@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./images/favikon.ico" type="image/x-icon"/>
+
     <!-- Font-1 LOGO-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +27,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#store">Store</a></li>
                 <li><a href="#newsletter">Newsletter</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <button onclick="navToggle();" class="nav-button"></button>           
         </nav>
@@ -116,18 +117,40 @@
                 </article>
             </div>
         </section>
-        <section class="subscribe-form-section" id="subscribe-form">
-            <div class="form-wrapper">
-                <h3 class="p-heading">Subscribe</h3>              
-                <form action="" class="subscribe-form">
-                    <input required type="text" class="form-input" placeholder="First name">
-                    <input required type="text" class="form-input" placeholder="Last name">
-                    <input required type="mail" class="form-input" placeholder="Email">
-                    <input type="submit" value="Submit" class="submit-input">
-                </form>
+        <section class="contact-form grid" id="contact">
+            <div class="section-header" id="newsletter">
+                <h2>LOREM IPSUM</h2>
+                <h2 class="effect-header">LOREM&nbspIPSUM</h2>                
             </div>
-        </section>
+
+            <div class="contact-form-wrapper">
+                <div class="contact-wrapper">
+                    <div class="contact">
+                        <h3 class="p-heading">Contact us</h3>
+                        <div class="contact-text">
+                            <p>RGPV<br>Airport Rd, Abbas Nagar, Gandhi<br>Nagar<br>Bhopal, 462033<br>Madyhya Pradesh, India</p><br>
+                            <p>Phone: +420 123 456 789</p>
+                            <p>Email: support@newpost.com</p>
+                        </div>
+                        
+                    </div>
+                </div>                
+                <div class="form-wrapper">
+                    <div class="inside-form-wrapper">
+                        <h3 class="p-heading">Subscribe</h3>              
+                        <form action="" class="subscribe-form">
+                            <input required type="text" class="form-input" placeholder="First name" minlength="2">
+                            <input required type="text" class="form-input" placeholder="Last name" minlength="2">
+                            <input required type="mail" class="form-input" placeholder="Email">
+                            <input type="submit" value="Submit" class="submit-input">
+                        </form>
+                    </div>
+                </div>                
+            </div>
+
+        </section>       
     </main>
+
     <footer>
 
     </footer>
