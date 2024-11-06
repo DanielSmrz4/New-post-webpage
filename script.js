@@ -82,3 +82,26 @@ submitInput.addEventListener("click", (e) => {
         input.value = ""
     })
 });
+
+
+// Scroll to Top button functionality and appearing
+const myScrollTopButton = document.querySelector("#scroll-to-top")
+
+
+const scrollTopButton = () => {
+    window.scrollTo(top)
+};
+
+
+window.addEventListener("scroll", (e) => {
+    e.preventDefault()
+
+    let scrolled = window.scrollY
+
+    if (Math.ceil(scrolled) > 350) {
+        myScrollTopButton.style.display="block"
+    }
+    else {
+         myScrollTopButton.style.display="none"
+    }
+});

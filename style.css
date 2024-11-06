@@ -204,7 +204,7 @@ nav h2 {
     right: 3%;
     top: 10px;
     display: none;
-    background-image: url("./images/hamburger.png");
+    background-image: url("./images/togglenav/hamburger.png");
     width: 27px;
     height: 27px;
     border: none;
@@ -212,6 +212,27 @@ nav h2 {
     color: #000;
     cursor: pointer;
     z-index: 9999;
+}
+
+#scroll-to-top {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    position: fixed;
+    z-index: 9999;
+    cursor: pointer;
+    background-color: rgba(255, 166, 0, 0.9);
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 1rem -9px #000;
+    display: none;
+    transition: all 100ms ease;
+}
+
+#scroll-to-top:hover {
+    background-color: var(--yellow-dark);
 }
 
 
@@ -344,21 +365,21 @@ nav h2 {
 }
 
 .article-animation-left {
-    animation: slide-in-left 800ms ease;
+    animation: slide-in-left 400ms ease;
     animation-timeline: view();
-    animation-range-end: 500px;   
+    animation-range-end: 30%;   
 }
 
 .article-animation-right {
-    animation: slide-in-right 800ms ease;
+    animation: slide-in-right 400ms ease;
     animation-timeline: view();
-    animation-range-end: 500px;
+    animation-range-end: 30%;
 }
 
 .image-animation-bottom {
     animation: slide-in-bot 1000ms ease;
     animation-timeline: view();
-    animation-range-end: 500px;
+    animation-range-end: 30%;
 }
 
 @keyframes slide-in-left {
@@ -442,6 +463,11 @@ figcaption {
     padding-block-start: 1rem;
 }
 
+.tel-and-mail {
+    text-decoration: none;
+    color: #000;
+}
+
 .form-wrapper {
     width: 50%;
 }
@@ -483,6 +509,7 @@ figcaption {
     color: #fff;
     box-shadow: 0 1px 5px -3px #000;
     cursor: pointer;
+    transition: all 100ms ease;
 }
 
 .subscribe-form > input[type="submit"]:hover {
