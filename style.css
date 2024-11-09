@@ -39,17 +39,6 @@ img {
     margin-inline: auto;
 }
 
-.box {
-    position: relative;
-    width: 15rem;
-    height: 15rem;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 0 2rem -20px #000;
-    transition: all 400ms ease;
-    cursor: pointer;
-}
-
 .section-header {
     position: relative;
     width: fit-content;
@@ -64,18 +53,6 @@ img {
     padding-block: .2rem;
     font-weight: 600;
     width: fit-content;
-}
-
-.store-box-header {
-    position: absolute;
-    height: 100%;
-    transform: translateX(-100%);
-    color: #fff;
-    font-size: 3rem;
-    font-weight: 100;
-    letter-spacing: 3px;
-    transition: all 400ms ease;
-    padding: .5rem;
 }
 
 .effect-header{
@@ -285,6 +262,37 @@ nav h2 {
     padding-inline: 1rem;
 }
 
+.box {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 2rem -20px #000;
+    transition: all 400ms ease;
+    cursor: pointer;
+}
+
+.box:hover .store-box-header {
+    transform: translateX(0);
+}
+
+.box:focus .store-box-header {
+    transform: translateX(0);
+}
+
+.store-box-header {
+    position: absolute;
+    height: 100%;
+    transform: translateX(-100%);
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 100;
+    letter-spacing: 3px;
+    transition: all 400ms ease;
+    padding: .5rem;
+}
+
 .box-children {   
     background-image: url("./images/store/skate.jpg");
     background-size: cover;
@@ -366,20 +374,23 @@ nav h2 {
 
 .article-animation-left {
     animation: slide-in-left 400ms ease;
+    -webkit-animation: slide-in-left 400ms ease;
     animation-timeline: view();
-    animation-range-end: 30%;   
+    animation-range-end: 30%;  
 }
 
 .article-animation-right {
     animation: slide-in-right 400ms ease;
+    -webkit-animation: slide-in-right 400ms ease;
     animation-timeline: view();
-    animation-range-end: 30%;
+    animation-range-end: 30%;   
 }
 
 .image-animation-bottom {
     animation: slide-in-bot 1000ms ease;
+    -webkit-animation: slide-in-bot 1000ms ease;
     animation-timeline: view();
-    animation-range-end: 30%;
+    animation-range-end: 30%;   
 }
 
 @keyframes slide-in-left {

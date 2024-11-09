@@ -57,19 +57,6 @@ myParagraphs.forEach(paragraph => {
 });
 
 
-// Store boxes Animation
-const box = document.querySelector(".box")
-const boxHeader = document.querySelectorAll(".store-box-header")
-
-const displayHeader = (i) => {
-    boxHeader[i].style.transform="translateX(0)"
-}
-
-const removeHeader = (i) => {
-    boxHeader[i].style.transform="translateX(-100%)"
-}
-
-
 // Reset inner text of form inputs
 const inputs = document.querySelectorAll(".form-input")
 const submitInput = document.querySelector(".submit-input")
