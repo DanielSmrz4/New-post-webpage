@@ -114,7 +114,7 @@ header {
 
 @keyframes logo-parallax {
     to {
-        transform: translate(-50%, 250%);
+        transform: translate(-50%, -1000px);
         scale: 1.04;
     }
 }
@@ -178,7 +178,7 @@ nav h2 {
 
 .nav-button {
     position: absolute;
-    right: 3%;
+    right: 5%;
     top: 10px;
     display: none;
     background-image: url("./images/togglenav/hamburger.png");
