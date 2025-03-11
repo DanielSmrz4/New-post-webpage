@@ -473,7 +473,7 @@ nav h2 {
 }
 
 .article-link {
-    color: var(--yellow-dark);
+    color: var(--yellow-light);
     width: fit-content;
     font-style: italic;
     text-underline-offset: 5px;
@@ -481,7 +481,11 @@ nav h2 {
 }
 
 .article-link:hover {
-    color: var(--yellow-light);
+    color: var(--yellow-dark);
+}
+
+.article-link:active {
+    color: var(--yellow-darker);
 }
 
 figcaption {
@@ -737,6 +741,9 @@ footer {
     #scroll-to-top:hover {
         background-color: var(--yellow-light);
     }
+    .article-link:hover {
+        color: var(--yellow-light);
+        }
     .links > a:hover {
         color: rgba(255, 255, 255, 0.5);
     }
