@@ -83,7 +83,9 @@
             </div>              
         </section>
 
-        <div class="divider"></div>
+        <div class="divider">
+            <div class="divider-background"></div>         
+        </div>
 
         <section class="newsletter grid" >
             <div class="section-header" id="newsletter">
@@ -139,9 +141,9 @@
                     <div class="inside-form-wrapper">
                         <h3 class="p-heading">Subscribe</h3>              
                         <form action="" class="subscribe-form">
-                            <input required type="text" class="form-input" placeholder="First name" minlength="2">
-                            <input required type="text" class="form-input" placeholder="Last name" minlength="2">
-                            <input required type="mail" class="form-input" placeholder="Email">
+                            <input type="text" class="form-input" placeholder="First name" minlength="3" required>
+                            <input type="text" class="form-input" placeholder="Last name" minlength="3" required>
+                            <input type="email" class="form-input" placeholder="Email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
                             <input type="submit" value="Submit" class="submit-input">
                         </form>
                     </div>
